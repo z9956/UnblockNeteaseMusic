@@ -12,7 +12,7 @@
 	"scripts": {
 		"start:dev": "cross-env LOG_LEVEL=debug node src/app.js -e https://music.163.com",
 		"start": "cross-env node src/app.js -e https://music.163.com",
-		"build": "cross-env node src/app.js -s -e https://music.163.com",
+		"build": "node app.js -s",
 		"build-webpack": "webpack",
 		"pkg": "pkg . --out-path=dist/",
 		"test": "jest"
@@ -37,6 +37,7 @@
 	"author": "nondanee, 1715173329, pan93412",
 	"license": "LGPL-3.0-only",
 	"dependencies": {
+		"@vercel/node": "^2.12.0",
 		"node-windows": "^1.0.0-beta.8",
 		"pino": "6.14.0",
 		"pino-pretty": "^7.6.1"
